@@ -1,8 +1,8 @@
 <!-- views/beer-onClick.ejs -->
 
-<div><img src="<%= beer.image_url %>" alt="beer image" style="height:200px"></div>
+<div><img src="<%= beer[0].image_url %>" alt="beer image" style="height:200px"></div>
 <div>
-    <h3><%- beer.name %></h3>
-    <p><%- beer.tagline %></p>
-    <p><%- beer.description %></p>
+    <h3><%- beer[0].name %></h3>
+    <p><%- beer[0].tagline %></p>
+    <p><%- beer[0].description %></p>
 </div>  
