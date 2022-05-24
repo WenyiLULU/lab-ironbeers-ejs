@@ -40,8 +40,7 @@ app.get('/beers/:beerId', (req, res) => {
   punkAPI
   .getBeer(req.params.beerId)
   .then(beer => {
-      console.log(beer)
-      
+      //console.log(beer)
       res.render('beer-onClick', {beer});
     })
   .catch(error => console.log(error)); 

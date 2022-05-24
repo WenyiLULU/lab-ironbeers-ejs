@@ -1,8 +1,8 @@
 <!-- views/beers.ejs -->
 
-<div>
+<div class="beer-grid">
     <% beersFromApi.forEach(beer => {%>
-        <div>
+        <div id="beer">
             <%- include('./partials/beer.ejs', {beer}) %>
         </div>
     <%}) %>
