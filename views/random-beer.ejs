@@ -1,1 +1,21 @@
 <!-- views/random-beer.ejs -->
+
+<div>
+    <% responseFromAPI.forEach(beer => { %>
+        <div>
+            <div><img src="<%= beer.image_url %>" alt="beer image not found" style="height:200px"></div>
+            <div>
+                <h3><%- beer.name %></h3>
+                <p><%- beer.description %></p>
+                <p><strong>Tagline: </strong><%- beer.tagline %></p>
+                <p><strong>Food pairing:</strong></p>
+                <ul>
+                    <% beer.food_pairing.forEach(pairing =>{ %>
+                        <p><%- pairing %></p>
+                    <% }) %>
+                </ul>
+                <p><strong>Brewers tips: </strong><%- beer.brewers_tips %></p>
+            </div>    
+        </div>
+    <%}) %>
+</div>
