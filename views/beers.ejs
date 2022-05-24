@@ -3,12 +3,7 @@
 <div>
     <% beersFromApi.forEach(beer => {%>
         <div>
-            <div><img src="<%= beer.image_url %>" alt="beer image" style="height:200px"></div>
-            <div>
-                <h4><%- beer.name %></h4>
-                <p><%- beer.description %></p>
-                <p><%- beer.tagline %></p>
-            </div>    
+            <%- include('./partials/beer.ejs', {beer}) %>
         </div>
     <%}) %>
 </div>
