@@ -1,15 +1,16 @@
 <!-- views/beer-onClick.ejs -->
+<div class="beer-onClick">
+    <div><img src="<%= beer[0].image_url %>" alt="beer image" style="height:200px"></div>
+    <div>
+        <h3><%- beer[0].name %></h3>
+        <p class="tagline"><%- beer[0].tagline %></p>
+        <p><strong>Food pairing:</strong></p>
+        <ul>
+            <% beer[0].food_pairing.forEach(pairing =>{ %>
+                <p><%- pairing %></p>
+            <% }) %>
+        </ul>
+        <p><strong>Brewers tips: </strong><%- beer[0].brewers_tips %></p>
 
-<div><img src="<%= beer[0].image_url %>" alt="beer image" style="height:200px"></div>
-<div>
-    <h3><%- beer[0].name %></h3>
-    <p class="tagline"><%- beer[0].tagline %></p>
-    <p><strong>Food pairing:</strong></p>
-    <ul>
-        <% beer[0].food_pairing.forEach(pairing =>{ %>
-            <p><%- pairing %></p>
-        <% }) %>
-    </ul>
-    <p><strong>Brewers tips: </strong><%- beer[0].brewers_tips %></p>
-
-</div>  
+    </div>  
+</div>
